@@ -3,3 +3,8 @@ languageCode = 'nl'
 title = 'Herbbalans'
 theme = "herbbalans"
 relativeURLS = true
+
+[module]
+  [[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "assets/js/bootstrap.bundle.min.js"
