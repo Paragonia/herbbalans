@@ -1,4 +1,11 @@
+# Hugo output
 /public
-/node_modules
 /resources
 .hugo_build.lock
+
+# NPM
+/node_modules
+
+# IntelliJ
+/.idea
+*.iml

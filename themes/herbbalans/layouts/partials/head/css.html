@@ -13,3 +13,4 @@
 {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+<link rel="stylesheet" href="./css/fontawesome.css">
