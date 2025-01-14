@@ -2,7 +2,6 @@ baseURL = 'https://www.herbbalans.nl/'
 languageCode = 'nl'
 title = 'Herbbalans'
 theme = "herbbalans"
-relativeURLS = true
 
 [module]
   [[module.mounts]]
