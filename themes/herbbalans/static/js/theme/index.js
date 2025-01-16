@@ -1,25 +1,3 @@
-//const swiper = new Swiper(".swiper-container", {
-//  loop: true,
-//  autoplay: {
-//    delay: 4000,
-//    disableOnInteraction: false,
-//  },
-//  breakpoints: {
-//    360: {
-//      slidesPerView: 2,
-//      spaceBetween: 30,
-//    },
-//    768: {
-//      slidesPerView: 4,
-//      spaceBetween: 35,
-//    },
-//    1024: {
-//      slidesPerView: 5,
-//      spaceBetween: 40,
-//    },
-//  },
-//});
-
 document.addEventListener("DOMContentLoaded", () => {
   const fadeInElements = document.querySelectorAll(".fade-in");
 
