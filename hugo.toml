@@ -1,6 +1,6 @@
 baseURL = 'https://www.herbbalans.nl/'
 languageCode = 'nl'
-title = 'Herbbalans'
+title = 'HerbBalans'
 theme = "herbbalans"
 
 [module]
