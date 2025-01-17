@@ -19,7 +19,7 @@
                     </div>
                     <div class="d-flex gap-2 py-2">
                 <span class="icon-circle-32 bg-grey">
-                    <a href="{{ .Site.Params.contact.facebook }}" target="_blank" class="icon-circle-32">
+                    <a href="{{ .Params.contact.facebook }}" target="_blank" class="icon-circle-32">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
                 </span>
@@ -29,8 +29,8 @@
             </div>
             <div class="row mt-5">
                 <div class="col-12 col-lg-4">
-                    <h3 class="text-subtitle c-white mb-4">Openingstijden</h3>
-                    {{ with .Site.Params.contact.openingtimes }}
+                    <h3 class="text-subtitle c-white mb-4">{{ .Params.contact.openingtime.title }}</h3>
+                    {{ with .Params.contact.openingtime.items }}
                         {{ range . }}
                             <div class="mb-2">
                                 <i class="fa-regular fa-clock" style="color: #c7c7c7"></i>
@@ -43,11 +43,11 @@
                 <div class="col-12 col-lg-3">
                     <div>
                         <h3 class="text-subtitle c-white mb-3 mb-lg-4 mt-5 mt-lg-0">
-                            Adres
+                            {{ .Params.contact.address.title }}
                         </h3>
                         <div>
                             <p class="text-silver pe-5">
-                                {{ with .Site.Params.contact.address }}
+                                {{ with .Params.contact.address.items }}
                                     {{ range . }}
                                         {{ title . }}
                                         <br/>
@@ -59,10 +59,10 @@
                 </div>
                 <div class="col-12 col-lg-3">
                     <div>
-                        <h3 class="text-subtitle c-white mb-3 mb-lg-4 mt-5 mt-lg-0">Contact</h3>
+                        <h3 class="text-subtitle c-white mb-3 mb-lg-4 mt-5 mt-lg-0">{{ .Params.contact.title }}</h3>
                         <div>
-                            <p class="text-silver my-0">{{ .Site.Params.contact.phone }}</p>
-                            <p class="text-silver">email : {{ .Site.Params.contact.email }}</p>
+                            <p class="text-silver my-0">{{ .Params.contact.phone }}</p>
+                            <p class="text-silver">email : {{ .Params.contact.email }}</p>
                         </div>
                     </div>
                 </div>
