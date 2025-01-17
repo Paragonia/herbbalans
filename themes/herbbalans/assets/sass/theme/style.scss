@@ -961,7 +961,7 @@
 /* Transition Style */
 .fade-in {
     opacity: 0;
-    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 .fade-in.visible {
     opacity: 1;
