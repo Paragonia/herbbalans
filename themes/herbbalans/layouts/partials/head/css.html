@@ -1,16 +1,6 @@
-{{/*
-{{- with resources.Get "css/main.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
-*/}}
+{{ $style := resources.Get "sass/main.scss" | toCSS }}
+{{ $fa := resources.Get "css/fontawesome.css" }}
 
-{{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
-{{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
-<link rel="stylesheet" href="./css/fontawesome.css">
+{{- $CSS := slice ( $style ) ( $fa )  | resources.Concat "css/main.css" | minify | fingerprint}}
+
+<link rel="stylesheet" href="{{ $CSS.Permalink }}" media="all">
