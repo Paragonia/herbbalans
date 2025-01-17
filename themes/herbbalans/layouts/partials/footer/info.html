@@ -19,7 +19,7 @@
                     </div>
                     <div class="d-flex gap-2 py-2">
                 <span class="icon-circle-32 bg-grey">
-                    <a href="https://www.facebook.com/herbbalans" target="_blank" class="icon-circle-32">
+                    <a href="{{ .Site.Params.contact.facebook }}" target="_blank" class="icon-circle-32">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
                 </span>
@@ -30,12 +30,14 @@
             <div class="row mt-5">
                 <div class="col-12 col-lg-4">
                     <h3 class="text-subtitle c-white mb-4">Openingstijden</h3>
-                    <div class="mb-2">
-                        <i class="fa-regular fa-clock" style="color: #c7c7c7"></i>
-                        <span class="text-silver"
-                        >Maandag - Vrijdag: 11:00 - 17:00</span
-                        >
-                    </div>
+                    {{ with .Site.Params.contact.openingtimes }}
+                        {{ range . }}
+                            <div class="mb-2">
+                                <i class="fa-regular fa-clock" style="color: #c7c7c7"></i>
+                                <span class="text-silver">{{ title . }}</span>
+                            </div>
+                        {{ end }}
+                    {{ end }}
                 </div>
                 <div class="col-12 col-lg-1"></div>
                 <div class="col-12 col-lg-3">
@@ -45,8 +47,12 @@
                         </h3>
                         <div>
                             <p class="text-silver pe-5">
-                                De Maar 31<br/>
-                                1676 EB Twisk
+                                {{ with .Site.Params.contact.address }}
+                                    {{ range . }}
+                                        {{ title . }}
+                                        <br/>
+                                    {{ end }}
+                                {{ end }}
                             </p>
                         </div>
                     </div>
@@ -55,8 +61,8 @@
                     <div>
                         <h3 class="text-subtitle c-white mb-3 mb-lg-4 mt-5 mt-lg-0">Contact</h3>
                         <div>
-                            <p class="text-silver my-0">06 42 41 42 76</p>
-                            <p class="text-silver">email : herbbalans@gmail.com</p>
+                            <p class="text-silver my-0">{{ .Site.Params.contact.phone }}</p>
+                            <p class="text-silver">email : {{ .Site.Params.contact.email }}</p>
                         </div>
                     </div>
                 </div>

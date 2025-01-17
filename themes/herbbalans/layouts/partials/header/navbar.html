@@ -3,7 +3,7 @@
         class="container d-none d-lg-flex justify-content-between border-hero"
 >
     <div class="d-flex gap-2 py-2">
-        <a href="https://www.facebook.com/herbbalans" target="_blank" class="icon-circle-32">
+        <a href="{{ .Site.Params.contact.facebook }}" target="_blank" class="icon-circle-32">
             <i class="fa-brands fa-facebook-f"></i>
         </a>
     </div>
@@ -12,11 +12,11 @@
     >
         <div>
             <i class="fa-regular fa-envelope fs-16"></i
-            ><span class="ms-2 fs-13">herbbalans@gmail.com</span>
+            ><span class="ms-2 fs-13">{{ .Site.Params.contact.email }}</span>
         </div>
         <div>
             <i class="fa-solid fa-phone me-2 fs-16"></i
-            ><span class="fs-13">06 42 41 42 76</span>
+            ><span class="fs-13">{{ .Site.Params.contact.phone }}</span>
         </div>
     </div>
 </div>

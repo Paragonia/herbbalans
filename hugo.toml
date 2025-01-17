@@ -7,3 +7,17 @@ theme = "herbbalans"
   [[module.mounts]]
     source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     target = "assets/js/bootstrap.bundle.min.js"
+
+[params]
+
+  [params.contact]
+    email = 'herbbalans@gmail.com'
+    phone = '06 42 41 42 76'
+    facebook = 'https://www.facebook.com/herbbalans'
+
+    [params.contact.address]
+      address1 = 'De Maar 31'
+      address2 = '1676 EB Twisk'
+
+    [params.contact.openingtimes]
+      time1 = 'Maandag - Vrijdag: 11:00 - 17:00'
