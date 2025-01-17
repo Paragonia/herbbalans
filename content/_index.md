@@ -1,5 +1,6 @@
 ---
 title: "HerbBalans"
+description: "Herstel je balans met de kracht van natuur"
 
 hero:
   section: "HERBBALANS"
