@@ -14,7 +14,7 @@
         </div>
         <div class="container px-0 my-0">
             <div class="row row-cols-1 row-cols-lg-4 g-3">
-                {{ range $index, $element := sort (where .Site.RegularPages "Section" "in" "proces") "Weight" }}
+                {{ range $index, $element := first 4 ( sort (where .Site.RegularPages "Section" "in" "proces") "Weight") }}
                     <div class="col fade-in" data-delay="{{ math.Mul $index 100 }}">
                         <div class="card h-100">
                             <div class="card-body">
