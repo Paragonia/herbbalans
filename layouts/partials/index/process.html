@@ -14,50 +14,19 @@
         </div>
         <div class="container px-0 my-0">
             <div class="row row-cols-1 row-cols-lg-4 g-3">
-                <div class="col fade-in">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <p class="text-subtitle c-semi-black c-main">01</p>
-                            <p class="text-subtitle c-semi-black">Intake</p>
-                            <p class="text-grey">
-                                We plannen een afspraak. Om je zo goed mogelijk te kunnen helpen, stuur ik een vragenlijst die je invult en terugstuurt.
-                            </p>
+                {{ range $index, $element := sort (where .Site.RegularPages "Section" "in" "proces") "Weight"  }}
+                    <div class="col fade-in" data-delay="{{ math.Mul $index 100 }}">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <p class="text-subtitle c-semi-black c-main">0{{ math.Add $index 1}}</p>
+                                <p class="text-subtitle c-semi-black">{{ $element.Name }}</p>
+                                <p class="text-grey">
+                                    {{ $element.Content }}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col fade-in" data-delay="100">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <p class="text-subtitle c-semi-black c-main">02</p>
-                            <p class="text-subtitle c-semi-black">Consult</p>
-                            <p class="text-grey">
-                                We bekijken samen je klachten. Aan de hand van het gesprek en de vragenlijst stellen we een leefstijl veranderplan op.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col fade-in" data-delay="200">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <p class="text-subtitle c-semi-black c-main">03</p>
-                            <p class="text-subtitle c-semi-black">Integratie</p>
-                            <p class="text-grey">
-                                De weken daarna ga je met dit plan aan de slag en hou je een dagboek bij.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col fade-in" data-delay="300">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <p class="text-subtitle c-semi-black c-main">04</p>
-                            <p class="text-subtitle c-semi-black">Evaluatie</p>
-                            <p class="text-grey">
-                                We bekijken of er extra aanpassingen nodig zijn, of dat we overgebleven klachten kunnen behandelen met supplementen en kruiden.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                {{ end }}
             </div>
         </div>
     </div>

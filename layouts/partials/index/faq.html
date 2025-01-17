@@ -27,32 +27,31 @@
                         </div>
                     </div>
                     <div class="accordion mt-5" id="wivanaAccordion">
-
-                        {{  range $index, $element := (where .Site.RegularPages "Section" "in" "faq") }}
-                        <div class="accordion-item">
-                  <span class="accordion-header" id="heading{{$index}}">
-                    <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapse{{$index}}"
-                            aria-expanded="true"
-                            aria-controls="collapse{{$index}}"
-                    >
-                      {{ $element.Title }}
-                    </button>
-                  </span>
-                            <div
-                                    id="collapse{{$index}}"
-                                    class="accordion-collapse collapse"
-                                    aria-labelledby="heading{{$index}}"
-                                    data-bs-parent="#wivanaAccordion"
-                            >
-                                <div class="accordion-body">
-                                    {{ $element.Content }}
+                        {{ range $index, $element := sort (where .Site.RegularPages "Section" "in" "faq") "Weight" }}
+                            <div class="accordion-item fade-in" data-delay="{{ math.Mul $index 100 }}">
+                                <span class="accordion-header" id="heading{{$index}}">
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapse{{$index}}"
+                                        aria-expanded="true"
+                                        aria-controls="collapse{{$index}}"
+                                    >
+                                    {{ $element.Title }}
+                                    </button>
+                                </span>
+                                <div
+                                        id="collapse{{$index}}"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="heading{{$index}}"
+                                        data-bs-parent="#wivanaAccordion"
+                                >
+                                    <div class="accordion-body">
+                                        {{ $element.Content }}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         {{ end }}
                     </div>
                 </div>

@@ -9,6 +9,6 @@ title = 'HerbBalans'
     
     [params.quote]
         text = 'Mijn missie is om vrouwen te helpen begrijpen wat de bron is van vrouwenklachten, en deze klachten op natuurlijke wijze, door leefstijl of kruiden, te behandelen.' 
-        title = 'Meester Herborist en Orthomoleculair adviseur' 
+        title = 'Meester Herborist en Orthomoleculair adviseur'
 +++
 
