@@ -1,9 +1,8 @@
 +++
-title = 'Home'
-date = 2023-01-01T08:00:00-07:00
-draft = false
+title = 'HerbBalans'
+
+[params] 
+    title = 'Herstel je balans met de kracht van natuur'
+    subtitle = 'Balans = homeostase. Bij HerbBalans helpen we je om je interne balans, je homeostase te herstellen. Het belangrijkste hierbij is terug naar de basis, terug naar de natuur, terug naar jezelf. Je eigen balans.'
 +++
 
-Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
-pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco.
