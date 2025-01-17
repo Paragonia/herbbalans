@@ -1,20 +1,6 @@
-{{/*  
-{{- with resources.Get "js/main.js" }}
-  {{- if eq hugo.Environment "development" }}
-    {{- with . | js.Build }}
-      <script src="{{ .RelPermalink }}"></script>
-    {{- end }}
-  {{- else }}
-    {{- $opts := dict "minify" true }}
-    {{- with . | js.Build $opts | fingerprint }}
-      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
-    {{- end }}
-  {{- end }}
-{{- end }}
-*/}}
-
- <!-- JavaScript and dependencies -->
  {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
- {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+ {{ $main := resources.Get "js/main.js" }}
 
- <script src="{{$js.Permalink}}" defer></script>
+ {{- $js := slice ($bootstrap) ($main) | resources.Concat "js/main.js" | resources.Minify | fingerprint }}
+
+ <script src="{{$js.Permalink}}" crossorigin="anonymous" defer></script>
