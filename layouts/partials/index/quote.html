@@ -7,7 +7,7 @@
                     <img src="icon/testimonial-icon.png" alt="testimonial quote" />
                 </div>
                 <p class="fs-22 lato c-silver text-center ceo-quote mt-3 mb-4">
-                    Mijn missie is om vrouwen te helpen begrijpen wat de bron is van vrouwenklachten, en deze klachten op natuurlijke wijze, door leefstijl of kruiden, te behandelen.
+                    {{ .Params.Quote.Text }}
                 </p>
             </div>
             <div>
@@ -23,7 +23,7 @@
                     {{ end }}
                 </div>
                 <p class="fs-16 lato c-silver text-center mt-2 mt-md-4 fade-in">
-                    Meester Herborist en Orthomoleculair adviseur
+                    {{ .Params.Quote.Title }}
                 </p>
             </div>
         </div>
