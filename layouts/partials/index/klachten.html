@@ -25,10 +25,10 @@
                 {{ $styles := slice
                     "border-bottom border-lg-right"
                     "border-bottom"
-                    "border-bottom border-lg-left"
-                    "border-lg-bottom-0 border-lg-right"
-                    "border-bottom-0"
-                    "border-bottom-0 border-lg-left"
+                    "border-lg-left border-bottom"
+                    "border-lg-right border-bottom border-lg-bottom-0"
+                    "border-bottom border-lg-bottom-0"
+                    "border-lg-left border-bottom border-lg-bottom-0"
                 }}
                 {{ range $index, $element := first 6 (sort (where .Site.RegularPages "Section" "in" "klachten") "Weight") }}
                     <div class="col d-flex flex-column align-items-center border-bottom {{index $styles $index}} border-white">
