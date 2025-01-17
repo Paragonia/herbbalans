@@ -55,40 +55,28 @@
                             <span class="ms-2 philosopher fs-14 c-main">DOEL</span>
                         </div>
                         <div class="title-about c-semi-black mt-4">
-                            Herstellen van je inwendige balans
+                            {{ .Params.About.Title }}
                         </div>
                     </div>
                     <span class="text-grey">
-                        Samen met jou ga ik op zoek naar de oorzaak van je klachten, zonder meteen iets voor te schrijven.
+                        {{ .Params.About.Subtitle }}
                     </span>
-                    <div class="d-block d-lg-flex">
-                        <div class="d-flex align-items-center my-3">
-                  <span class="icon-circle-37-main me-3"
-                  ><i class="fa-solid fa-check"></i
-                  ></span>
-                        </div>
-                        <div>
-                            <span class="text-subtitle c-semi-black my-4">Begin bij de bron</span>
-                            <br/>
-                            <p class="text-grey my-3">
-                                Ik help je om op duurzame manier je klachten te verminderen, doordat we deze aanpakken bij de bron, in plaats van door symptomen te onderdrukken.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="dblock d-lg-flex">
-                        <div class="d-flex align-items-center my-3">
-                  <span class="icon-circle-37-main me-3"
-                  ><i class="fa-solid fa-check"></i
-                  ></span>
-                        </div>
-                        <div>
-                            <span class="text-subtitle c-semi-black my-4">Homeostase = balans</span>
-                            <br/>
-                            <p class="text-grey my-3">
-                                Het streven is om je inwendige balans, je homeostase te herstellen.
-                            </p>
-                        </div>
-                    </div>
+                    {{ with .Params.About.Items }}
+                        {{ range . }}
+                            <div class="d-block d-lg-flex">
+                                <div class="d-flex align-items-center my-3">
+                                    <span class="icon-circle-37-main me-3"><i class="fa-solid fa-check"></i></span>
+                                </div>
+                                <div>
+                                    <span class="text-subtitle c-semi-black my-4">{{ index . "title" }}</span>
+                                    <br/>
+                                    <p class="text-grey my-3">
+                                        {{ index . "description" }}
+                                    </p>
+                                </div>
+                            </div>
+                        {{ end }}
+                    {{ end }}
                 </div>
             </div>
         </div>
