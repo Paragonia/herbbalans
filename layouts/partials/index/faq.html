@@ -27,105 +27,33 @@
                         </div>
                     </div>
                     <div class="accordion mt-5" id="wivanaAccordion">
+
+                        {{  range $index, $element := (where .Site.RegularPages "Section" "in" "faq") }}
                         <div class="accordion-item">
-                  <span class="accordion-header" id="headingOne">
+                  <span class="accordion-header" id="heading{{$index}}">
                     <button
                             class="accordion-button"
                             type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
+                            data-bs-target="#collapse{{$index}}"
                             aria-expanded="true"
-                            aria-controls="collapseOne"
+                            aria-controls="collapse{{$index}}"
                     >
-                      Waar vinden de gesprekken plaats?
+                      {{ $element.Title }}
                     </button>
                   </span>
                             <div
-                                    id="collapseOne"
+                                    id="collapse{{$index}}"
                                     class="accordion-collapse collapse"
-                                    aria-labelledby="headingOne"
+                                    aria-labelledby="heading{{$index}}"
                                     data-bs-parent="#wivanaAccordion"
                             >
                                 <div class="accordion-body">
-                                    Gesprekken vinden over het algemeen plaats in mijn praktijk. Indien je mobiliteitsproblemen hebt, is het ook mogelijk dat ik bij je langskom.
+                                    {{ $element.Content }}
                                 </div>
                             </div>
                         </div>
-
-                        <div class="accordion-item">
-                  <span class="accordion-header" id="headingTwo">
-                    <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
-                    >
-                       Welke opleiding heb je gevolgd?
-                    </button>
-                  </span>
-                            <div
-                                    id="collapseTwo"
-                                    class="accordion-collapse collapse"
-                                    aria-labelledby="headingTwo"
-                                    data-bs-parent="#wivanaAccordion"
-                            >
-                                <div class="accordion-body">
-                                    Ik ben opgeleid tot herborist en orthomoleculair voedingsadviseur. Ik ben tevens lid van het <a href="https://herboristengilde.nl" target="_blank">herboristengilde</a>.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                  <span class="accordion-header" id="headingThree">
-                    <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree"
-                    >
-                      Waarom moet ik een vragenlijst invullen voor de intake?
-                    </button>
-                  </span>
-                            <div
-                                    id="collapseThree"
-                                    class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree"
-                                    data-bs-parent="#wivanaAccordion"
-                            >
-                                <div class="accordion-body">
-                                    Om je goed te kunnen helpen is het van belang een zo compleet mogelijk beeld te krijgen van jouw levensstijl en klachten.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                  <span class="accordion-header" id="headingFour">
-                    <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour"
-                            aria-expanded="false"
-                            aria-controls="collapseFour"
-                    >
-                      Hoe lang duurt een consult?
-                    </button>
-                  </span>
-                            <div
-                                    id="collapseFour"
-                                    class="accordion-collapse collapse"
-                                    aria-labelledby="headingFour"
-                                    data-bs-parent="#wivanaAccordion"
-                            >
-                                <div class="accordion-body">
-                                    Een consult duurt ongeveer 1 uur.
-                                </div>
-                            </div>
-                        </div>
+                        {{ end }}
                     </div>
                 </div>
             </div>
