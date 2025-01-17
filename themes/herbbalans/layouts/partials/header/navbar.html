@@ -23,13 +23,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark lato">
     <div class="container-lg d-flex">
         <a class="navbar-brand ms-0 ms-sm-3 ms-lg-0" href="/">
+            {{ with resources.Get "images/logo.png" }}
+            {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
             <img
-                    src="img/wivana-logo-dark.png"
+                    src="{{ .RelPermalink }}"
                     alt="Brand Logo"
                     width="188"
                     height="41"
                     class="d-inline-block align-text-top"
             />
+            {{ end }}
+            {{ end }}
         </a>
 
         <button

@@ -6,11 +6,15 @@
                 <div class="col">
                     <div>
                         <a href="/">
+                            {{ with resources.Get "images/logo.png" }}
+                            {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
                             <img
-                                    src="img/wivana-logo-dark.png"
+                                    src="{{ .RelPermalink }}"
                                     alt="wivana logo"
                                     class="footer-logo"
                             />
+                            {{ end }}
+                            {{ end }}
                         </a>
                     </div>
                     <div class="d-flex gap-2 py-2">

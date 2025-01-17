@@ -7,27 +7,39 @@
                     <div class="row row-cols-1 row-cols-sm-2 g-3">
                         <div class="col d-flex flex-column gap-3">
                             <div>
-                                <img
-                                        src="img/about-1.jpg"
-                                        alt="treatment"
-                                        class="img-about"
-                                />
+                                {{ with resources.Get "images/about-1.jpg" }}
+                                    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+                                        <img
+                                                src="{{ .RelPermalink }}"
+                                                alt="treatment"
+                                                class="img-about"
+                                        />
+                                    {{ end }}
+                                {{ end }}
                             </div>
                             <div>
+                                {{ with resources.Get "images/about-2.jpg" }}
+                                {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
                                 <img
-                                        src="img/about-2.jpg"
+                                        src="{{ .RelPermalink }}"
                                         alt="treatment"
                                         class="img-about"
                                 />
+                                {{ end }}
+                                {{ end }}
                             </div>
                         </div>
                         <div class="col">
                             <div>
+                                {{ with resources.Get "images/about-3.jpg" }}
+                                {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
                                 <img
-                                        src="img/about-3.jpg"
+                                        src="{{ .RelPermalink }}"
                                         alt="treatment"
-                                        class="img-about-last"
+                                        class="img-about"
                                 />
+                                {{ end }}
+                                {{ end }}
                             </div>
                         </div>
                     </div>

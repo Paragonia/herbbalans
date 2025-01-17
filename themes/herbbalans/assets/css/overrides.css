@@ -5,3 +5,19 @@
     }
   {{ end }}
 {{ end }}
+
+{{ with resources.Get "images/ceo.jpg" }}
+  {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+    .bg-ceo {
+      background-image: linear-gradient(rgba(17, 32, 21, .6), rgba(17, 32, 21, .6)), url('{{ .RelPermalink }}');
+    }
+  {{ end }}
+{{ end }}
+
+{{ with resources.Get "images/choose.jpg" }}
+  {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+    .bg-choose-us {
+        background-image: linear-gradient(rgba(17, 32, 21, .6), rgba(17, 32, 21, .6)), url('{{ .RelPermalink }}');
+    }
+  {{ end }}
+{{ end }}

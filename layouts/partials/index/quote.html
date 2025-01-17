@@ -12,11 +12,15 @@
             </div>
             <div>
                 <div class="d-flex justify-content-center fade-in">
+                    {{ with resources.Get "images/signature.png" }}
+                    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
                     <img
-                            src="img/Signature-dummy_2.png"
-                            class="signature"
+                            src="{{ .RelPermalink }}"
                             alt="signature"
+                            class="signature"
                     />
+                    {{ end }}
+                    {{ end }}
                 </div>
                 <p class="fs-16 lato c-silver text-center mt-2 mt-md-4 fade-in">
                     Meester Herborist en Orthomoleculair adviseur

@@ -4,7 +4,15 @@
         <div class="container px-0">
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col fade-in pe-5">
-                    <img src="img/faqs.jpg" alt="faqs" class="img-faqs" />
+                    {{ with resources.Get "images/faqs.jpg" }}
+                    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+                    <img
+                            src="{{ .RelPermalink }}"
+                            alt="faqs"
+                            class="img-faqs"
+                    />
+                    {{ end }}
+                    {{ end }}
                 </div>
                 <div class="col fade-in ps-4">
                     <div>
