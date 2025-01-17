@@ -4,4 +4,4 @@
 
 {{- $CSS := slice ( $style ) ( $fa ) ($overrides)  | resources.Concat "css/main.css" | minify | fingerprint}}
 
-<link rel="stylesheet" href="{{ $CSS.Permalink }}" media="all">
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">

@@ -3,4 +3,4 @@
 
  {{- $js := slice ($bootstrap) ($main) | resources.Concat "js/main.js" | resources.Minify | fingerprint }}
 
- <script src="{{$js.Permalink}}" crossorigin="anonymous" defer></script>
+ <script src="{{$js.RelPermalink}}" crossorigin="anonymous" defer></script>
