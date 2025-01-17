@@ -1,0 +1,7 @@
+{{ with resources.Get "images/bg-1.jpg" }}
+  {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+    .bg-hero {
+      background-image: url('{{ .RelPermalink }}');
+    }
+  {{ end }}
+{{ end }}

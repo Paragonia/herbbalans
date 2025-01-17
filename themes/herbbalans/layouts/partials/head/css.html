@@ -1,6 +1,7 @@
 {{ $style := resources.Get "sass/main.scss" | toCSS }}
 {{ $fa := resources.Get "css/fontawesome.css" }}
+{{ $overrides := resources.Get "css/overrides.css" | resources.ExecuteAsTemplate "css/style.css" . }}
 
-{{- $CSS := slice ( $style ) ( $fa )  | resources.Concat "css/main.css" | minify | fingerprint}}
+{{- $CSS := slice ( $style ) ( $fa ) ($overrides)  | resources.Concat "css/main.css" | minify | fingerprint}}
 
 <link rel="stylesheet" href="{{ $CSS.Permalink }}" media="all">
