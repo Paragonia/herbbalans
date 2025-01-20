@@ -2,7 +2,10 @@
 <meta name="viewport" content="width=device-width">
 <meta name="description" content="{{ .Description }}">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ with resources.Get "images/favicon.ico" }}
-    <link rel="icon" type="image/x-icon" href="{{ .RelPermalink }}" />
+{{ with resources.Get "images/favicon.png" }}
+    {{ with .Resize (printf "%dx%d png" 16 16) }}<link rel="icon" sizes="32x32" href="{{ .RelPermalink }}" type="image/png">{{ end }}
+    {{ with .Resize (printf "%dx%d png" 32 32) }}<link rel="icon" sizes="32x32" href="{{ .RelPermalink }}" type="image/png">{{ end }}
+    {{ with .Resize (printf "%dx%d png" 48 48) }}<link rel="icon" sizes="48x48" href="{{ .RelPermalink }}" type="image/png">{{ end }}
+    {{ with .Resize (printf "%dx%d png" 96 96) }}<link rel="icon" sizes="96x96" href="{{ .RelPermalink }}" type="image/png">{{ end }}
 {{ end }}
 {{ partialCached "head/css.html" . }}
