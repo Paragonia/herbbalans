@@ -5,8 +5,8 @@
     border-radius: .3rem;  
 }
 
-.bg-dark {
-    background-color: #C0673C !important;
+.bg-complement {
+    background-color: var(--color-complement) !important;
 }
 
 .navbar-toggler {
@@ -15,6 +15,7 @@
 
 :root {
     --link-color-1: #5C9269;
+    --color-complement: #6D3642;
 }
 
 .bg-hero, .bg-darker {
@@ -41,3 +42,4 @@
         }
     }
 }
+
