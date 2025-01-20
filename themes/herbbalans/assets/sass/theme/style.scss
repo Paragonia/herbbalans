@@ -56,7 +56,9 @@
         /* Primary color for the site, often used for buttons, links, etc. */
         --color-main: #5c9269;
         /* Darker shade of the primary color, used for hover states or dark background elements */
-        --color-darker: #1D4026;
+        --color-darker: #303f35;
+        /* Darker shade of the primary color, used for hover states or dark background elements */
+        --color-complement: #C0673C;
         /* Lighter shade of the primary color, for lighter elements or backgrounds */
         --color-lighter: #99c7a3;
         /* Subtle background color, used for subtle backgrounds or areas with less emphasis */
@@ -277,6 +279,7 @@
     .bg-darker { background-color: var(--color-darker) !important; }
     .bg-grey { background-color: var(--text-color-1); }
     .bg-main { background-color: var(--color-main); }
+    .bg-complement { background-color: var(--color-complement) !important; }
 
     /* Font Size Utility Classes */
     .fs-12 { font-size: 12px; }
