@@ -12,3 +12,15 @@
 .navbar-toggler {
     display: none;
 }
+
+.accordion-item {
+    a {
+        color: var(--text-color-1);
+        transition: background-color .3s ease, color .3s ease;
+
+        &:hover {
+            color: var(--text-color-2);
+            transition: background-color .3s ease, color .3s ease;
+        }
+    }
+}
