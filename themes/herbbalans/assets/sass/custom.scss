@@ -13,13 +13,30 @@
     display: none;
 }
 
-.accordion-item {
+:root {
+    --link-color-1: #5C9269;
+}
+
+.bg-hero, .bg-darker {
     a {
-        color: var(--text-color-1);
+        text-decoration: none; /* Remove underline from links */
+        cursor: pointer; /* Change cursor to pointer on hover */
+
+        color: inherit;
+
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+.accordeon-item {
+    a {
+        color: var(--link-color-1);
         transition: background-color .3s ease, color .3s ease;
 
         &:hover {
-            color: var(--text-color-2);
+            color: var(--bs-text);
             transition: background-color .3s ease, color .3s ease;
         }
     }
