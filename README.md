@@ -14,4 +14,6 @@ Make sure Hugo is [installed](https://gohugo.io/installation/)
 ```
 brew install hugo
 brew install sass/sass/sass
+brew install node
+npm install
 ```
