@@ -11,5 +11,7 @@ Make sure Hugo is [installed](https://gohugo.io/installation/)
 - `hugo server -D --disableFastRender`
 
 ## Tools
+```
 brew install hugo
 brew install sass/sass/sass
+```
