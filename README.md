@@ -17,3 +17,5 @@ brew install sass/sass/sass
 brew install node
 npm install
 ```
+
+Homebrew moet installeren
