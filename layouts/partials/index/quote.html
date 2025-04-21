@@ -12,6 +12,17 @@
             </div>
             <div>
                 <div class="d-flex justify-content-center fade-in">
+                    {{ with resources.Get "images/monika.png" }}
+                    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+                    <img
+                            src="{{ .RelPermalink }}"
+                            alt="avatar"
+                            class="avatar"
+                    />
+                    {{ end }}
+                    {{ end }}
+                </div>
+                <div class="d-flex justify-content-center fade-in">
                     {{ with resources.Get "images/signature.png" }}
                     {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
                     <img
