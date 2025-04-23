@@ -1031,9 +1031,16 @@
 .footer-links li {
     margin: 10px 0;
 }
+.header-logo {
+    max-width: 100%;
+    width: 480px;
+    height: 240px;
+    object-fit: contain;
+    filter: drop-shadow(4px 4px 5px black);    
+}
 .footer-logo {
     width: 240px;
-    height: 54px;
+    height: 120px;
     object-fit: contain;
 }
 .subtext-footer {
