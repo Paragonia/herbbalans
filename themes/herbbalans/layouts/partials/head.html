@@ -11,13 +11,13 @@
 {{ with resources.Get "images/og-image.png" }}
     <meta property="og:url" content="https://herbbalans.nl">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
     <meta property="og:title" content="HerbBalans">
     <meta property="og:description" content="Herstel je balans met de kracht van natuur">
-    {{ with .Resize (printf "%dx%d png" 1200 630) }}<meta name="image" property="og:image" content="https://herbbalans.nl{{ .RelPermalink }}">{{ end }}
+    {{ with .Resize (printf "%dx%d png" 1200 630) }}<meta property="og:image" content="https://herbbalans.nl{{ .RelPermalink }}">{{ end }}
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="herbbalans.nl">
-    <meta property="twitter:url" content="https://herbbalans.nl">
+    <meta name="twitter:url" content="https://herbbalans.nl">
     <meta name="twitter:title" content="HerbBalans">
     <meta name="twitter:description" content="Herstel je balans met de kracht van natuur">
     {{ with .Resize (printf "%dx%d png" 1200 630) }}<meta name="twitter:image" content="https://herbbalans.nl{{ .RelPermalink }}">{{ end }}
