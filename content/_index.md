@@ -37,7 +37,7 @@ faq:
   
 contact:
   title: "Contact"
-  email: "info@herbbalans.nl"
+  email: "herbbalans@gmail.com"
   phone: "06 42 41 42 76"
   facebook: "https://www.facebook.com/herbbalans"
 
