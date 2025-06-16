@@ -40,6 +40,7 @@ contact:
   email: "herbbalans@gmail.com"
   phone: "06 42 41 42 76"
   facebook: "https://www.facebook.com/herbbalans"
+  kvk: "91871816"
 
   address:
     title: "Adres"
@@ -50,6 +51,6 @@ contact:
   openingtime:
     title: "Openingstijden"
     items:
-        item1: "Maandag - Vrijdag: 11:00 - 17:00"
+        item1: "Maandag - Vrijdag : Op afspraak"
 ---
 
