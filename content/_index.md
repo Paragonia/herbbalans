@@ -25,7 +25,7 @@ process:
 
 quote:
     title: "Meester Herborist en Orthomoleculair adviseur"
-    text: "Mijn missie is om vrouwen te helpen begrijpen wat de bron is van vrouwenklachten, en deze klachten op natuurlijke wijze, door leefstijl of kruiden, te behandelen." 
+    text: "Mijn missie is om vrouwen te helpen begrijpen wat de bron is van hun klachten, en deze klachten op natuurlijke wijze, door leefstijl en/of kruiden, te behandelen." 
 
 klachten:
   section: "WAAROM VOOR MIJ KIEZEN"

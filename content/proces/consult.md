@@ -1,5 +1,5 @@
 ---
 title: "Consult"
-summary: We bekijken samen je klachten. Aan de hand van het gesprek en de vragenlijst stellen we een leefstijl veranderplan op.
+summary: "Tijdens onze vervolgafspraak gaan we naar de klachten kijken, zodat we de oorzaak kunnen achterhalen en een behandelplan opstellen. Er is dan ruimte voor vragen en uitleg."
 weight: 2
 ---
