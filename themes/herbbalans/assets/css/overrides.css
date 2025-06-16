@@ -9,7 +9,7 @@
 {{ with resources.Get "images/ceo.jpg" }}
   {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
     .bg-ceo {
-      background-image: linear-gradient(rgba(17, 32, 21, .6), rgba(17, 32, 21, .6)), url('{{ .RelPermalink }}');
+      background-image: linear-gradient(rgba(17, 32, 21, .4), rgba(17, 32, 21, .4)), url('{{ .RelPermalink }}');
     }
   {{ end }}
 {{ end }}
@@ -17,7 +17,39 @@
 {{ with resources.Get "images/choose.jpg" }}
   {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
     .bg-choose-us {
-        background-image: linear-gradient(rgba(17, 32, 21, .6), rgba(17, 32, 21, .6)), url('{{ .RelPermalink }}');
+        background-image: linear-gradient(rgba(17, 32, 21, .4), rgba(17, 32, 21, .4)), url('{{ .RelPermalink }}');
+    }
+  {{ end }}
+{{ end }}
+
+{{ with resources.Get "images/rates-1.png" }}
+  {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+    .bg-service-1 {
+        background-image: linear-gradient(rgba(17, 32, 21, .4), rgba(17, 32, 21, .4)), url('{{ .RelPermalink }}');
+    }
+  {{ end }}
+{{ end }}
+
+{{ with resources.Get "images/rates-2.png" }}
+  {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+    .bg-service-2 {
+        background-image: linear-gradient(rgba(17, 32, 21, .4), rgba(17, 32, 21, .4)), url('{{ .RelPermalink }}');
+    }
+  {{ end }}
+{{ end }}
+
+{{ with resources.Get "images/rates-3.png" }}
+  {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+    .bg-service-3 {
+        background-image: linear-gradient(rgba(17, 32, 21, .4), rgba(17, 32, 21, .4)), url('{{ .RelPermalink }}');
+    }
+  {{ end }}
+{{ end }}
+
+{{ with resources.Get "images/rates-4.png" }}
+  {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+    .bg-service-4 {
+        background-image: linear-gradient(rgba(17, 32, 21, .4), rgba(17, 32, 21, .4)), url('{{ .RelPermalink }}');
     }
   {{ end }}
 {{ end }}
