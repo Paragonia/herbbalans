@@ -1,0 +1,68 @@
+    <!-- Testimonial Start -->
+    <div class="bg-subtle w-100">
+      <div class="width-base pt-0">
+        <div class="container px-0 mx-0 mx-auto">
+          <div
+            class="row row-cols-1 row-cols-sm-2 g-3 align-items-end mb-5 fade-in"
+          >
+            <div>
+              <div>
+                <span class="icon-circle-17-main"
+                  ><i class="fa-solid fa-plus c-main"></i
+                ></span>
+                <span class="ms-2 philosopher fs-14 c-main">ERVARINGEN</span>
+              </div>
+              <div class="title-about c-semi-black">Reacties van klanten</div>
+            </div>
+          </div>
+          <div>
+            <div class="row row-cols-1 row-cols-sm-2 g-3">
+              <div class="col fade-in">
+                <div class="custom-card-1 position-static">
+                  <div class="card-body bg-semi-white">
+                    <div>
+                      <p class="text-grey">
+                        Monika heeft op basis van mijn klachten een aantal wijzigingen in mijn dieet voorgesteld. Na een aantal weken voelde ik me energieker en had ik aanzienlijk minder last van mijn allergieën. Monika is betrokken en gaat professioneel te werk.
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-start pt-3"
+                    >
+                      <div class="d-flex gap-2">
+                        <div>
+                            {{ with resources.Get "images/andre.png" }}
+                                {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+                                    <img
+                                            src="{{ .RelPermalink }}"
+                                            alt="testimonial"
+                                            class="testimonial-circle"
+                                    />
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                        <div>
+                          <div class="fs-18 c-main lato">Andre</div>
+                          <div class="fs-13 lato c-semi-transparent">
+                            ★★★★★
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <img
+                          src="icon/testi.svg"
+                          width="90"
+                          height="66"
+                          alt="testimonial quote"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
